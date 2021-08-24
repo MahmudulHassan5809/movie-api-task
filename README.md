@@ -49,7 +49,8 @@
                     "website": null
                 }
                
-    		   If movie not found it then it will return 404 (movie not found)
+    		   if movie is already found in our database by this title it will return (movie with this title already exists.)
+               If movie not found it then it will return 404 (movie not found)
                if title is send as empty it will return 400 bad request (This field may not be blank)
    
    ---
