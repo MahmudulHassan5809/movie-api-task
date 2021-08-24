@@ -1,4 +1,4 @@
-## Api Documentation
+## Project Description
 
 
 ## Project Setup
@@ -22,6 +22,9 @@
     DATABASE_HOST=******
     DATABASE_PORT=******
     OMDBAPI_KEY=******
+
+## Api Documentation (swagger)
+    http://127.0.0.1:8000/swagger/
     
 ## Movies Api
 	POST REQUEST
