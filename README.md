@@ -13,6 +13,15 @@
     5. Run python manage.py runserver
     6. project will run in http://127.0.0.1:8000/
     7. To test run python manage.py test
+
+##  ENV VARIABLE
+    SECRET_KEY=******
+	DATABASE_NAME=******
+    DATABASE_USER=******
+    DATABASE_PASS=******
+    DATABASE_HOST=******
+    DATABASE_PORT=******
+    OMDBAPI_KEY=******
     
 ## Movies Api
 	POST REQUEST
