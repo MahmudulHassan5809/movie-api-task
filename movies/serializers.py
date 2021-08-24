@@ -5,9 +5,13 @@ from rest_framework import serializers
 
 
 class CommentSerializer(serializers.ModelSerializer):
+    movie_name = serializers.SerializerMethodField()
+
+    def get_movie_name(self,obj):
+        return obj.movie.title
     class Meta:
         model = Comment
-        fields = '__all__'
+        fields = ['movie','comment','movie_name']
 
 
 

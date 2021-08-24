@@ -14,17 +14,15 @@ class MovieViewSet(viewsets.ModelViewSet):
     queryset = Movie.objects.all()
     serializer_class = MovieSerializer
     http_method_names = ['get','post']
-    search_fields = ['$title','$plot','$actors']
+    search_fields = ['$title','$plot','$actors',"$director"]
     ordering_fields = ['imdb_rating']
     
     def get_queryset(self):
         fields = self.request.GET.copy()
         qs = self.queryset
         
-        try:
-            fields.pop('search')
-        except KeyError:
-            pass
+        fields.pop('search',None)
+        fields.pop('ordering',None)
         
         qs = qs.filter_by_query(fields.dict())
         return qs
@@ -71,7 +69,7 @@ class CommentViewSet(viewsets.ModelViewSet):
         except KeyError:
             pass
         
-        qs = qs.filter_by_query(fields.dict())
+        qs = qs.filter_by_query(fields.dict()).select_related('movie')
         return qs
 
     
