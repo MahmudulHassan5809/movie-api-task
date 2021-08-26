@@ -10,9 +10,10 @@
     4. Istall all the requirements using this commans -> pip install -r requirements.txt
     5. Create a .env file copy all the ENV variable from .env.example and replace by your values.
        For testing purpose i am not putting .env file in gitignore.
-    5. Run python manage.py runserver
-    6. project will run in http://127.0.0.1:8000/
-    7. To test run python manage.py test
+    6. Run python manage.py migrate
+    6. Run python manage.py runserver
+    7. project will run in http://127.0.0.1:8000/
+    8. To test run python manage.py test
 
 ##  ENV VARIABLE
     SECRET_KEY=******
