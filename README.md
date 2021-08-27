@@ -15,6 +15,23 @@
     7. project will run in http://127.0.0.1:8000/
     8. To test run python manage.py test
 
+
+##  DATABASE SETUP IN settings.py
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql_psycopg2', # Info you want to use mysql please change the engine
+            'NAME': os.getenv('DATABASE_NAME'),
+            'USER': os.getenv('DATABASE_USER'),
+            'PASSWORD': os.getenv('DATABASE_PASS'),
+            'HOST': os.getenv('DATABASE_HOST'),
+            'PORT': os.getenv('DATABASE_PORT'),
+            'TEST': {
+                'MIRROR': 'default',
+            },
+        },
+        
+    }
+
 ##  ENV VARIABLE
     SECRET_KEY=******
 	DATABASE_NAME=******
